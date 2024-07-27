@@ -1,4 +1,3 @@
-import database from "../database"
 import { useParams} from "react-router-dom"
 import { useState, useEffect } from "react";
 import { IoIosArrowBack } from "react-icons/io";
@@ -9,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Counter from "../components/Counter";
 
-export default function Produto(){
+export default function Produto({data}){
     const [produtoFavorito, setProdutoFavorito] = useState(false);
     const {id} = useParams();
     const [produto, setProduto] = useState([])
@@ -22,7 +21,7 @@ export default function Produto(){
     };
 
     useEffect(()=>{
-      let prod = database.find(e => e.id == id)
+      let prod = data.find(e => e.id == id)
       setProduto(prod)
     }, [])
 
@@ -33,9 +32,6 @@ export default function Produto(){
         return newFavorito;
       });
     };
-
-  
-
 
     return (
         <section className="flex flex-col h-screen w-full bg-orange-500 m-auto max-w-sm">

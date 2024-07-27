@@ -1,11 +1,11 @@
 import GridCards from "../components/GridCards";
 
-export default function Home(){
+export default function Home({data}){
     return(
         <>
             <div className="max-w-sm m-auto">
-
-                <GridCards />
+                
+                <GridCards data={data} />
             </div>
         </>
     )
