@@ -49,7 +49,7 @@ export default function Card({ id, favorito, imagem, estrelas, titulo, descricao
         <button onClick={handleNavigate} className="w-40 aspect-[3/4] bg-gray-800 rounded-sm overflow-hidden shadow-sm relative z-0">
             <img
                 src={imagem}
-                alt={"imagem do produto " + titulo && titulo}
+                alt={`imagem do produto ${titulo || 'sem título'}`}
                 className="w-full aspect-video object-cover "
             />
 

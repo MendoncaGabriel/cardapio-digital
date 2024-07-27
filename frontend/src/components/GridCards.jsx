@@ -1,10 +1,11 @@
 import Card from "../components/Card";
-export default function GridCards({data}){
+
+export default function GridCards({produtos}){
 
     return(
         <section className="p-5 grid grid-cols-2 gap-4">
             {
-                data.map((item, index) => 
+                produtos.map((item, index) => 
                 <Card 
                     key={index}
                     id={item.id}
