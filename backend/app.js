@@ -8,7 +8,7 @@ var apiRouter = require('./routes/api');
 
 var app = express();
 app.use(cors())
-// teste
+// teste ok
 
 app.use(logger('dev'));
 app.use(express.json());
