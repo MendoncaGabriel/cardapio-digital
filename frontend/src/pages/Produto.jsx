@@ -38,7 +38,7 @@ export default function Produto(){
 
 
     return (
-        <section className="flex flex-col h-screen w-full bg-orange-500">
+        <section className="flex flex-col h-screen w-full bg-orange-500 m-auto max-w-sm">
           <div className="flex items-center justify-between p-4 ">
             <IoIosArrowBack onClick={BackButton} className="text-2xl text-gray-100 hover:text-gray-500" />
             <h2  className="text-white font-bold text-2xl">LOGO DA EMPRESA</h2>
