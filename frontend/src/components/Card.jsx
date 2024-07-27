@@ -25,7 +25,7 @@ const truncateText = (text, maxLength) => {
 
 
 
-export default function Card({ id, favorito, imagem, estrelas, titulo, descricaoReduzida, preco, precoAntigo, bandeira }) {
+export default function Card({ id, favorito, imagem, estrelas, titulo, descricao, preco, precoAntigo, bandeira }) {
     const navigate = useNavigate()
 
     const [Favorito, setFavorito] = useState(favorito);
@@ -61,15 +61,15 @@ export default function Card({ id, favorito, imagem, estrelas, titulo, descricao
                 )
             }
         
-            <div className="flex flex-col justify-between p-2 pt-0  flex-grow  h-[calc(100%-90px)]"> {/* preencher altura toral sem sair do component*/}
+            <div className="flex flex-col justify-between p-2 pt-1  flex-grow  h-[calc(100%-90px)]"> {/* preencher altura toral sem sair do component*/}
                 
-                    <p className="font-semibold text-gray-200 text-sm ">
+                    <p className="font-semibold text-left text-gray-200 text-sm ">
                         {titulo}
                     </p>
                     {
-                        descricaoReduzida && (
-                            <p className="text-sm leading-4  text-gray-500">
-                                {truncateText(descricaoReduzida, 38)}
+                        descricao && (
+                            <p className="text-sm leading-4 text-left  text-gray-500">
+                                {truncateText(descricao, 38)}
                             </p>
                         )
                     }
@@ -79,9 +79,9 @@ export default function Card({ id, favorito, imagem, estrelas, titulo, descricao
                     </div>
             
 
-                <button onClick={handleToggleFavorite}>
-                    <FaHeart className={`z-50 absolute bottom-3 right-4 text-2xl ${Favorito ? 'text-red-500' : 'text-gray-600'}`} />
-                </button>
+                    <button onClick={handleToggleFavorite}>
+                        <FaHeart className={`z-50 absolute bottom-3 right-4 text-2xl ${Favorito ? 'text-red-500' : 'text-gray-600'}`} />
+                    </button>
                 
                     {
                         precoAntigo ? (

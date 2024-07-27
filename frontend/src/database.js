@@ -5,7 +5,7 @@
         favorito: false,
         estrelas: 4,
         titulo: "Pizza de Pepperoni",
-        descricaoReduzida: "Deliciosa pizza de pepperoni com queijo derretido e molho caseiro.",
+        descricao: "Deliciosa pizza de pepperoni com queijo derretido e molho caseiro.",
         preco: 49.99,
         bandeira: "Promoção!"
     },
@@ -15,7 +15,7 @@
         favorito: false,
         estrelas: 5,
         titulo: "Hambúrguer Gourmet",
-        descricaoReduzida: "Hambúrguer suculento com carne premium, queijo cheddar e bacon crocante.",
+        descricao: "Hambúrguer suculento com carne premium, queijo cheddar e bacon crocante.",
         preco: 29.99,
         precoAntigo: 34.99,
         bandeira: "Desconto!"
@@ -26,7 +26,7 @@
         favorito: false,
         estrelas: 3,
         titulo: "Sushi Variado",
-        descricaoReduzida: "Seleção de sushis frescos com peixe de alta qualidade e arroz temperado.",
+        descricao: "Seleção de sushis frescos com peixe de alta qualidade e arroz temperado.",
         preco: 89.99,
         precoAntigo: 99.99,
         bandeira: "Novo!"
@@ -37,7 +37,7 @@
         favorito: false,
         estrelas: 4,
         titulo: "Tacos Mexicanos",
-        descricaoReduzida: "Tacos recheados com carne temperada, guacamole e salsa fresca.",
+        descricao: "Tacos recheados com carne temperada, guacamole e salsa fresca.",
         preco: 24.99,
         precoAntigo: 29.99,
         bandeira: "Promoção!"
@@ -48,7 +48,7 @@
         favorito: false,
         estrelas: 5,
         titulo: "Lasagna",
-        descricaoReduzida: "Lasagna caseira com camadas de carne, molho de tomate e queijo gratinado.",
+        descricao: "Lasagna caseira com camadas de carne, molho de tomate e queijo gratinado.",
         preco: 54.99,
         precoAntigo: 64.99,
         bandeira: "Desconto!"
@@ -59,7 +59,7 @@
         favorito: false,
         estrelas: 3,
         titulo: "Salada Caesar",
-        descricaoReduzida: "Salada Caesar com peito de frango grelhado, croûtons e molho cremoso.",
+        descricao: "Salada Caesar com peito de frango grelhado, croûtons e molho cremoso.",
         preco: 19.99,
         precoAntigo: 24.99,
         bandeira: "Saudável!"

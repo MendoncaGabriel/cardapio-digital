@@ -1,6 +1,6 @@
 export default function Carousel({imagens}){
     return (
-        <div className="border border-red-600 aspect-square overflow-x-auto flex man snap-mandatory snap-x "> 
+        <div className=" aspect-square overflow-x-auto flex man snap-mandatory snap-x "> 
             {
                 imagens.map((item, index) => (
                     <img 

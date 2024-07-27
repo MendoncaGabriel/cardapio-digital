@@ -20,7 +20,7 @@ export default function GridCards(){
                     favorito={item.favorito} 
                     estrelas={item.estrelas} 
                     titulo={item.titulo}
-                    descricaoReduzida={item.descricaoReduzida}
+                    descricao={item.descricao}
                     preco={item.preco}
                     precoAntigo={item.precoAntigo}
                     bandeira={item.bandeira}
