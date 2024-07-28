@@ -1,14 +1,13 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const cors = require('cors')
-var apiRouter = require('./routes/api');
+const conn = require('./config/database')
 
-var app = express();
+const app = express();
 app.use(cors())
-// teste
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -16,7 +15,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api', apiRouter);
+// import routes
+const userRoutes = require('./routes/userRoutes')
+const productRoutes = require('./routes/productRoutes')
+
+// routes
+app.use('/api/user', userRoutes);
+app.use('/api/product', productRoutes);
 
 // frontend
 app.use(express.static(path.resolve(__dirname, '../frontend/dist')));
@@ -40,4 +45,14 @@ app.use(function(req, res, next) {
   //   res.send('error');
   // });
 
-module.exports = app;
+  conn
+.sync({force: true})
+// .sync()
+// .then(()=>{
+//     app.listen(port, ()=>{
+//         console.log(`Servidor online. http://localhost:${port}`)
+//     })
+// })
+.catch(err => console.error('Erro: ', err))
+
+  module.exports = app;
